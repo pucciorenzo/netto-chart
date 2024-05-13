@@ -1,0 +1,8 @@
+netto:
+  image: "pucciorenzo/netto"
+grafana:
+  image: "grafana/grafana:main"
+  environment:
+    - GF_FEATURE_TOGGLES_ENABLE=flameGraph
+pyroscope:
+  image: "grafana/pyroscope"

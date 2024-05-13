@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: netto
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: netto
+  template:
+    metadata:
+      labels:
+        app: netto
+    spec:
+      containers:
+      - name: netto
+        image: {{ .Values.netto.image }}
+        securityContext:
+          privileged: true
+        ports:
+        - containerPort: 80
