@@ -1,8 +1,11 @@
 netto:
   image: "pucciorenzo/netto"
+  tag: latest
+  pullPolicy: Always
+  address: "pyroscope.netto.svc.cluster.local."
 grafana:
-  image: "grafana/grafana:main"
-  environment:
-    - GF_FEATURE_TOGGLES_ENABLE=flameGraph
-pyroscope:
-  image: "grafana/pyroscope"
+  enabled: true
+  adminUser: "admin"
+  adminPassword: "admin" 
+  rbac:
+    create: false

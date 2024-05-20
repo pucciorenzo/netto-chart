@@ -1,4 +1,9 @@
 apiVersion: v2
 name: netto-chart
-description: A Helm chart for deploying the Netto project
-version: 0.1.0
+description: A Helm chart for deploying the Netto project with Pyroscope and Grafana
+version: 1.0.0
+dependencies:
+- name: grafana
+  repository: "https://grafana.github.io/helm-charts"
+  version: "*"
+  condition: grafana.enabled

@@ -3,7 +3,6 @@ kind: DaemonSet
 metadata:
   name: netto
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: netto
@@ -15,7 +14,16 @@ spec:
       containers:
       - name: netto
         image: {{ .Values.netto.image }}
+        imagePullPolicy: "{{ .Values.netto.pullPolicy }}"
         securityContext:
           privileged: true
+        args:
+          - --address
+          - "{{ .Values.netto.address }}"
         ports:
         - containerPort: 80
+        env:
+        - name: NETTO_HOST
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
