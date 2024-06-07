@@ -2,7 +2,7 @@
 This tutorial allow to install [ Netto ](https://github.com/miolad/netto) in a kubernetes cluster with minimal permissions using Helm.
 ## Requirements
 - Linux kernel version: **5.5**
-- Netto container run in **--privileged** mode
+- Netto container run in `--privileged` mode
 ## Install Netto, Grafana and Pyroscope
 Clone this repository
 ```
