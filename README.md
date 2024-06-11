@@ -1,5 +1,5 @@
 # Netto deployment in K8s
-This tutorial allow to install [Netto] (https://github.com/miolad/netto) in a kubernetes cluster with minimal permissions using Helm.
+This tutorial allow to install [Netto](https://github.com/miolad/netto) in a kubernetes cluster with minimal permissions using Helm.
 ## Requirements
 - Linux kernel version: **5.5**
 - Netto container run in `--privileged` mode
