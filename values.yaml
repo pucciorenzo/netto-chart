@@ -2,10 +2,4 @@ netto:
   image: "pucciorenzo/netto"
   tag: latest
   pullPolicy: Always
-  address: "pyroscope.netto.svc.cluster.local."
-grafana:
-  enabled: true
-  adminUser: "admin"
-  adminPassword: "admin" 
-  rbac:
-    create: false
+  address: "http://your-instance.it"
